@@ -27,7 +27,8 @@ const AllTopics = () => {
         <Card.Img variant="top" src={categoryTopic.image_url}/>
         <Card.Text className='p-3'>
                 <p>{categoryTopic.details}</p>
-                    
+                <Link to={`/topic/${categoryTopic._id}`}><Button variant="outline-primary" className=' rounded fw-bolder'>Get premium access</Button></Link>
+
         </Card.Text>
       </Card.Body>
       <Card.Footer className="d-flex justify-content-between justify-items-center ">
