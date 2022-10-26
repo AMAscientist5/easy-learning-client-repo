@@ -1,0 +1,31 @@
+
+.user-img{
+  border-radius: 50%; 
+  width: 40px; 
+}
+.user-img:hover{
+   width: 50px;
+}
+
+.user-name:hover{
+    font-size: 40px;
+}
+
+.user-img:hover .user-name{
+    display: block;
+    visibility: visible;
+}
+
+.login, .register{
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+}
+
+
+.login:hover, .register:hover{
+   text-decoration: underline;
+
+}
