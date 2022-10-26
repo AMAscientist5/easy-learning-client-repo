@@ -1,15 +1,23 @@
-// import React, { useEffect, useState } from 'react';
-// import React, { useState } from 'react';
-// import { useLoaderData } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const SideNavigation = () => {
-    // const [alltopics, setAlltopics] = useState({name: 'name'})
-    // const allData = useLoaderData();
-
+    const [categories, setCategories] = useState([]);
+       console.log(categories)
+    useEffect(() => {
+      fetch('http://localhost:5000/all-topics')
+      .then(res => res.json())
+      .then(data => setCategories(data))
+    }, [])
     
     return (
         <div>
-            <h2>This is Side Navigation:</h2>
+            <h4> ALL Topics {categories.length}</h4>
+             {
+                 categories.map( category => <p key={category.id}> 
+                 <Link to={`/category/${category.id}`}>{category.name}</Link>
+                </p>)
+             }
         </div>
     );
 };
