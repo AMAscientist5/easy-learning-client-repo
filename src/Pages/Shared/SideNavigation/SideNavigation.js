@@ -5,7 +5,7 @@ const SideNavigation = () => {
     const [categories, setCategories] = useState([]);
        console.log(categories)
     useEffect(() => {
-      fetch('http://localhost:5000/all-topics')
+      fetch('http://localhost:5000/categories')
       .then(res => res.json())
       .then(data => setCategories(data))
     }, [])

@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
+import Header from '../../Shared/Header/Header';
 
 
 const Register = () => {
@@ -28,7 +29,9 @@ const Register = () => {
     }
 
     return (
-        <Form onSubmit={handleSubmit}>
+        <div>
+            <Header></Header>
+            <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Full Name</Form.Label>
                 <Form.Control name="name" type="text" placeholder="Full Name" />
@@ -57,6 +60,7 @@ const Register = () => {
             </Form.Text>
            
         </Form>
+        </div>
     );
 };
 

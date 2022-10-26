@@ -32,12 +32,12 @@ const Header = () => {
             style={{height:'60px'}}
            ></Image> 
                  </Link></Navbar.Brand>
-                 <Navbar.Brand><Link to='/'>Easy-Learning-Plartform</Link></Navbar.Brand>
+                 <Navbar.Brand><Link to='/getstarted'>Easy-Learning-Plartform</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link> <Link to='/'>Get Started</Link></Nav.Link>
-                        <Nav.Link href="#features"> <Link to='/alltopics'>All Courses</Link></Nav.Link>
+                        <Nav.Link> <Link to='/getstarted'>Get Started</Link></Nav.Link>
+                        <Nav.Link href="#features"> <Link to='/'>All Courses</Link></Nav.Link>
                         <Nav.Link href="#features"> <Link to='/blog'>Blog</Link></Nav.Link>
                         <Nav.Link href="#features"> <Link to='/faq'>FAQ</Link></Nav.Link>
                     
