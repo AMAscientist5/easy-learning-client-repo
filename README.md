@@ -1,5 +1,5 @@
-Site name: Aradun (A easy learning platform)
-Live Site: ddddddddddddddd
+Name: Aradun (A easy learning platform)
+Live Site: https://easy-learning-plartform.web.app/ 
 
 Feature:
 1. Single Page application
