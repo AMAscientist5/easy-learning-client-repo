@@ -23,7 +23,9 @@ export const router = createBrowserRouter([
         path: "/category/:id",
         element: <AllTopics></AllTopics>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/category/${params.id}`),
+          fetch(
+            `https://easy-learning-server-plartform.vercel.app/category/${params.id}`
+          ),
       },
       {
         path: "/topic/:id",
@@ -33,7 +35,9 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/topic/${params.id}`),
+          fetch(
+            `https://easy-learning-server-plartform.vercel.app/topic/${params.id}`
+          ),
       },
     ],
   },
