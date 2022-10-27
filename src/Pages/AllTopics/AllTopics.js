@@ -6,6 +6,8 @@ import { FaStar, FaFileDownload, FaUserTie } from 'react-icons/fa';
 import Button from 'react-bootstrap/Button';
 
 
+import Pdf from "react-to-pdf";
+const ref = React.createRef();
 
 const AllTopics = () => {
     const categoryTopic = useLoaderData();
@@ -15,10 +17,13 @@ const AllTopics = () => {
 
             <div className='d-flex align-items-center mb-2 w-80 justify-content-center'>
                 <h1 className=''> Web Development</h1>
-                <Button className='ms-5' variant="outline-primary"><FaFileDownload></FaFileDownload> Download</Button>
+                <Pdf targetRef={ref} filename="code-example.pdf">
+                 {({ toPdf }) => <Button onClick={toPdf} className='ms-5' variant="outline-primary"><FaFileDownload></FaFileDownload> Download</Button>}
+                </Pdf>
+                
             </div>
            
-          <Card className="mb-5 w-75 mx-auto">
+          <Card ref={ref} className="mb-5 w-75 mx-auto">
             <Card.Header className=''>
              <h2>{categoryTopic.title}</h2>
            </Card.Header>
@@ -49,5 +54,6 @@ const AllTopics = () => {
         </div>
     );
 };
+
 
 export default AllTopics;
