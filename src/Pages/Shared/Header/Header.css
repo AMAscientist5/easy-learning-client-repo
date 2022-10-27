@@ -3,18 +3,6 @@
   border-radius: 50%; 
   width: 40px; 
 }
-.user-img:hover{
-   width: 50px;
-}
-
-.user-name:hover{
-    font-size: 40px;
-}
-
-.user-img:hover .user-name{
-    display: block;
-    visibility: visible;
-}
 
 .login, .register{
     margin-right: 20px;
@@ -25,7 +13,28 @@
 }
 
 
-.login:hover, .register:hover{
+/* .login:hover, .register:hover{
    text-decoration: underline;
 
-}
+} */
+
+.tool{
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tool .tooltext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tool:hover .tooltext {
+    visibility: visible;
+  }

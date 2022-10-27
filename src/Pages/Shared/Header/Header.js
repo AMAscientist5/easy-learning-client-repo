@@ -3,9 +3,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../../../Assets/logo.jpg';
-import Image from 'react-bootstrap/Image'
-// import { FaUser } from 'react-icons/fa';
+import Logo from '../../../Assets/logo.png';
+import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { useContext, useState } from 'react';
@@ -25,15 +24,10 @@ const Header = () => {
         <Navbar collapseOnSelect className='mb-4' expand="lg" bg="light" variant="light">
             <Container>
                 <Navbar.Brand><Link to='/'>       
-                <Image
-            roundedCircle 
-            className='me-2'
-            src={logo}
-            style={{height:'60px'}}
-           ></Image> 
-                 </Link></Navbar.Brand>
-                 <Navbar.Brand><Link to='/getstarted'>Easy-Learning-Plartform</Link></Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Image className='me-2' src={Logo} style={{height:'50px'}}></Image> 
+                </Link></Navbar.Brand>
+                 <Navbar.Brand><Link className='fs-3' to='/getstarted'>Aradun</Link></Navbar.Brand>
+                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link> <Link to='/getstarted'>Get Started</Link></Nav.Link>
@@ -43,22 +37,17 @@ const Header = () => {
                     
                         {
                             toggle ? <Nav.Link href="#pricing"> <button className='border-0' onClick={ () => setToggle(!toggle)}>Dark</button></Nav.Link>
-                            :
+                            : 
                             <Nav.Link href="#pricing"><button className='border-0' onClick={ () => setToggle(!toggle)}>Light</button></Nav.Link>
-                        }
-                        
-                        
-                       
-                       
+                        }                                                                  
                     </Nav>
                     <Nav>
                         <Nav.Link href="#deets">
                             {
                                 user?.uid ?
                                     <div>
-                                        <span className='user-name me-2 d-none'>{user?.displayName}</span>
-                                        <span><img className='user-img' src={user?.photoURL} alt="" /> </span>
-                                        <Button className='logOut' variant="light" onClick={handleLogOut}>Log out</Button>
+                                          <Button className='logOut' variant="light" onClick={handleLogOut}>Log out</Button>
+                                          <img title={user?.displayName} className='user-img' src={user?.photoURL} alt="" />                                                    
                                     </div>
                                     :
                                     <>
@@ -66,7 +55,6 @@ const Header = () => {
                                         <Link className='register' to='/register'>Register</Link>
                                     </>
                             }
-
                         </Nav.Link>
                         {/* <Nav.Link eventKey={2} href="#memes">
                             {user?.photoURL ?
