@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { FaGoogle, FaGithub} from "react-icons/fa";
@@ -10,9 +10,11 @@ import Header from '../../Shared/Header/Header';
 
 
 const Login = () => {
-
-    const {signIn, providerLogin} = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation(); 
+    const from = location.state?.from?.pathname || '/'
+    const {signIn, providerLogin} = useContext(AuthContext);
+   
 
     const googleProvider = new GoogleAuthProvider()
     const githubProvider = new GithubAuthProvider()
@@ -27,7 +29,7 @@ const Login = () => {
             const user = result.user;
             console.log(user);
             form.reset();
-            navigate('/')
+            navigate(from, {replace: true})
         })
         .catch(error => console.error(error))
     }

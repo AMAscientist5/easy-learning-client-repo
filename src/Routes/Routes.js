@@ -9,6 +9,7 @@ import GetStarted from '../Pages/GetStarted/GetStarted';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login/Login';
 import Register from '../Pages/Login/Register/Register';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 // import Topic from '../Pages/Topic/Topic';
 
 export const router = createBrowserRouter([
@@ -27,7 +28,7 @@ export const router = createBrowserRouter([
           },
           {
               path: '/topic/:id',
-              element: <CheckOut></CheckOut> ,
+              element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
               loader: ({params}) => fetch(`http://localhost:5000/topic/${params.id}`)
   
           },
