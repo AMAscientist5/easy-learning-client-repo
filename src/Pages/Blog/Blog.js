@@ -1,11 +1,12 @@
 import React from "react";
+import Footer from "../Shared/Footer/Footer";
 import Header from "../Shared/Header/Header";
 
 const Blog = () => {
   return (
     <div>
       <Header></Header>
-      <div className="w-75 mx-auto">
+      <div className="w-75 mx-auto mb-5">
         <div className="m-5 text-center">
           <h1> Blog feature</h1>
         </div>
@@ -130,6 +131,7 @@ const Blog = () => {
           </p>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "../Shared/Header/Header";
 import Accordion from "react-bootstrap/Accordion";
+import Footer from "../Shared/Footer/Footer";
 const Faq = () => {
   return (
     <div>
       <Header></Header>
-      <div className="w-50 mx-auto">
+      <div className="w-50 mx-auto mb-5">
         <div className="text-center">
           {" "}
           <h1>FAQ</h1>
@@ -149,6 +150,7 @@ const Faq = () => {
           </Accordion>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

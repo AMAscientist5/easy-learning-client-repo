@@ -3,7 +3,7 @@ Live Site: https://easy-learning-plartform.web.app/
 
 Feature:
 
-1. Single Page application
+1. Single Page applicationcls
 2. Blog-based informative site
 3. Pretty UI design and look
 4. Authentication feature developed by firebase

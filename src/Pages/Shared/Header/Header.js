@@ -28,49 +28,68 @@ const Header = () => {
     >
       <Container>
         <Navbar.Brand>
-          <Link to="/">
+          <Link to="/getstarted">
             <Image
-              className="me-2"
+              className="me-2 d-flex"
               src={Logo}
               style={{ height: "50px" }}
             ></Image>
           </Link>
         </Navbar.Brand>
         <Navbar.Brand>
-          <Link className="fs-3" to="/getstarted">
+          <Link
+            className="fs-3 text-decoration-none logo-name"
+            to="/getstarted"
+          >
             Aradun
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+        <Navbar.Collapse id="responsive-navbar-nav" className="navigation">
+          <Nav className="me-auto ms-5">
+            {" "}
             <Nav.Link>
-              {" "}
-              <Link to="/getstarted">Get Started</Link>
+              <Link
+                className="text-decoration-none get-started"
+                to="/getstarted"
+              >
+                Get Started
+              </Link>
             </Nav.Link>
             <Nav.Link href="#features">
               {" "}
-              <Link to="/">All Courses</Link>
+              <Link className="text-decoration-none all-courses" to="/">
+                All Courses
+              </Link>
             </Nav.Link>
             <Nav.Link href="#features">
               {" "}
-              <Link to="/blog">Blog</Link>
+              <Link className="text-decoration-none blog" to="/blog">
+                Blog
+              </Link>
             </Nav.Link>
             <Nav.Link href="#features">
               {" "}
-              <Link to="/faq">FAQ</Link>
+              <Link className="text-decoration-none faq" to="/faq">
+                FAQ
+              </Link>
             </Nav.Link>
-
             {toggle ? (
               <Nav.Link href="#pricing">
                 {" "}
-                <button className="border-0" onClick={() => setToggle(!toggle)}>
+                <button
+                  className="border-0 dark"
+                  onClick={() => setToggle(!toggle)}
+                >
                   Dark
                 </button>
               </Nav.Link>
             ) : (
               <Nav.Link href="#pricing">
-                <button className="border-0" onClick={() => setToggle(!toggle)}>
+                <button
+                  className="border-0 light"
+                  onClick={() => setToggle(!toggle)}
+                >
                   Light
                 </button>
               </Nav.Link>
