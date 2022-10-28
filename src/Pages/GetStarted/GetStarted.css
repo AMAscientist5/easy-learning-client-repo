@@ -1,3 +1,17 @@
 .custom-height {
   height: 100vh;
 }
+
+.getstarted {
+  box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+}
+
+.side-bar-getstarted {
+  background-color: #1d1918;
+  height: 100vh;
+}
+
+.main-part-getstarted {
+  background-color: #fafafa;
+  height: 100vh;
+}

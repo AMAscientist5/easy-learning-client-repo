@@ -1,0 +1,18 @@
+.side-navigation {
+  /* background-color: #3444b5; */
+  background-color: #33383e;
+  height: 100vh;
+  text-align: center;
+  padding: 15px;
+}
+.side-navigation a {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 16px;
+  font-weight: 500;
+}
+.side-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}

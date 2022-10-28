@@ -1,0 +1,9 @@
+.footer-container {
+  height: 100%;
+  position: relative;
+}
+
+.custom-footer {
+  position: absolute;
+  bottom: 0;
+}

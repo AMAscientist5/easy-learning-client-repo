@@ -114,14 +114,14 @@ const Header = () => {
                   />
                 </div>
               ) : (
-                <>
+                <div className="d-flex flex-sm-column flex-lg-row">
                   <Link className="login" to="/login">
                     Login
                   </Link>
                   <Link className="register" to="/register">
                     Register
                   </Link>
-                </>
+                </div>
               )}
             </Nav.Link>
           </Nav>
