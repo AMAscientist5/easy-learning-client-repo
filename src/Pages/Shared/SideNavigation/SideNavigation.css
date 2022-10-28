@@ -4,6 +4,9 @@
   height: 100vh;
   text-align: center;
   padding: 15px;
+
+  position: sticky;
+  top: 0;
 }
 .side-navigation a {
   text-decoration: none;

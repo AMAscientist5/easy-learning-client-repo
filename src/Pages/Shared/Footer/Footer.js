@@ -6,6 +6,7 @@ import {
   FaWhatsapp,
   FaTwitch,
 } from "react-icons/fa";
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -14,9 +15,8 @@ const Footer = () => {
         <footer>
           <div className="bg-black text-center p-5">
             <h2 className="text-white">Aradun</h2>
-
-            <div className="d-flex justify-content-around align-items-center">
-              <div className="w-25">
+            <div className="foter-responsive text-center d-md-flex d-sm-flex justify-content-sm-center align-items-sm-center justify-content-md-around justify-content-lg-around">
+              <div className="">
                 <h4 className="text-white">About us</h4>
                 <div className="text-secondary">
                   <p className="mb-0">Easy Learning</p>
@@ -25,8 +25,7 @@ const Footer = () => {
                   <p className="mb-0">Long time support</p>
                 </div>
               </div>
-
-              <div className="w-25">
+              <div className="">
                 <div>
                   <h4 className="text-white">Contact us</h4>
                 </div>
@@ -51,12 +50,12 @@ const Footer = () => {
                   </button>
                 </div>
               </div>
-
-              <div className="w-25">
+              <div className="">
                 <h4 className="text-white">Address:</h4>
                 <div>
                   <p className="text-secondary mb-0">
-                    House - Old 56, Lake Circus, (1st Floor), Panthapath, Dhaka
+                    House - Old 56, Lake Circus, <br />
+                    (1st Floor), Panthapath, Dhaka <br />
                     (Near Square Hospital)
                   </p>
 

@@ -8,7 +8,6 @@ const Faq = () => {
       <Header></Header>
       <div className="w-50 mx-auto mb-5">
         <div className="text-center">
-          {" "}
           <h1>FAQ</h1>
         </div>
         <div>
