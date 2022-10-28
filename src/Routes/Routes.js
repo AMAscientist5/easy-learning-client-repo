@@ -18,6 +18,8 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () =>
+          fetch(`https://easy-learning-server-plartform.vercel.app/topic`),
       },
       {
         path: "/category/:id",

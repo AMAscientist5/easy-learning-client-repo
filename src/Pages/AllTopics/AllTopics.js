@@ -9,7 +9,6 @@ const ref = React.createRef();
 
 const AllTopics = () => {
   const categoryTopic = useLoaderData();
-
   return (
     <div>
       <div className="d-flex align-items-center mb-2 w-80 justify-content-center">
@@ -22,7 +21,6 @@ const AllTopics = () => {
           )}
         </Pdf>
       </div>
-
       <Card ref={ref} className="mb-5 w-75 mx-auto">
         <Card.Header className="">
           <h2>{categoryTopic.title}</h2>
