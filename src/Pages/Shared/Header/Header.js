@@ -12,6 +12,7 @@ import "./Header.css";
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   const [toggle, setToggle] = useState(true);
+
   const handleLogOut = () => {
     logOut()
       .then(() => {})
@@ -45,8 +46,8 @@ const Header = () => {
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" className="navigation">
-          <Nav className="me-auto ms-5">
+        <Navbar.Collapse id="responsive-navbar-nav" className="navigation m-0">
+          <Nav className="me-auto ms-3 align-items-center">
             {" "}
             <Nav.Link>
               <Link
@@ -100,7 +101,8 @@ const Header = () => {
               {user?.uid ? (
                 <div>
                   <Button
-                    className="logOut"
+                    className="logOut "
+                    id="text-bold"
                     variant="light"
                     onClick={handleLogOut}
                   >
