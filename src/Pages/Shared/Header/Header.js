@@ -46,7 +46,10 @@ const Header = () => {
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" className="navigation m-0">
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          className="navigation m-0 align-items-center"
+        >
           <Nav className="me-auto ms-3 align-items-center">
             {" "}
             <Nav.Link>
@@ -99,9 +102,9 @@ const Header = () => {
           <Nav>
             <Nav.Link href="#deets">
               {user?.uid ? (
-                <div>
+                <div className="text-center">
                   <Button
-                    className="logOut "
+                    className="logOut  log-btn-style "
                     id="text-bold"
                     variant="light"
                     onClick={handleLogOut}
@@ -116,7 +119,7 @@ const Header = () => {
                   />
                 </div>
               ) : (
-                <div className="d-flex flex-sm-column flex-lg-row">
+                <div className="d-flex flex-sm-column flex-md-column flex-lg-row justify-content-center align-items-center">
                   <Link className="login" to="/login">
                     Login
                   </Link>
